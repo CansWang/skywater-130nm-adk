@@ -50,7 +50,7 @@ set ADK_POWER_MESH_TOP_LAYER 6
 # are being driven by this kind of cell. It should usually be some kind
 # of simple inverter.
 
-set ADK_DRIVING_CELL "sky130_fd_sc_hd__inv_2"
+set ADK_DRIVING_CELL "sky130_fd_sc_hs__inv_2"
 
 #-------------------------------------------------------------------------
 # ADK_TYPICAL_ON_CHIP_LOAD
@@ -87,7 +87,7 @@ set ADK_FILLER_CELLS \
 # tying low to VSS.
 
 set ADK_TIE_CELLS \
-  "sky130_fd_sc_hd__conb_1"
+  "sky130_fd_sc_hs__conb_1"
  
 #-------------------------------------------------------------------------
 # ADK_WELL_TAP_CELL
@@ -109,7 +109,7 @@ set ADK_WELL_TAP_INTERVAL 13
 # This list should specify the end cap cells if the library requires them.
 
 # source: https://github.com/RTimothyEdwards/open_pdks/blob/master/sky130/openlane/sky130_fd_sc_hd/config.tcl#L30
-set ADK_END_CAP_CELL "sky130_fd_sc_hd__decap_3"
+set ADK_END_CAP_CELL "sky130_fd_sc_hs__decap_4"
 
 #-------------------------------------------------------------------------
 # ADK_ANTENNA_CELL
@@ -136,7 +136,7 @@ set ADK_ANTENNA_CELL "sky130_fd_sc_hd__diode_2"
 
 set ADK_LVS_EXCLUDE_CELL_LIST \
   "sky130_fd_sc_hd__fill_* \
-   sky130_fd_sc_hd__decap_* \
+   sky130_fd_sc_hs__decap_* \
    sky130_fd_sc_hd__tapvpwrvgnd_1"
 
 #-------------------------------------------------------------------------
@@ -154,7 +154,7 @@ set ADK_LVS_EXCLUDE_CELL_LIST \
 
 set ADK_VIRTUOSO_EXCLUDE_CELL_LIST \
   "sky130_fd_sc_hd__fill_* \
-   sky130_fd_sc_hd__decap_* \
+   sky130_fd_sc_hs__decap_* \
    sky130_fd_sc_hd__tapvpwrvgnd_1"
 
 #-------------------------------------------------------------------------
@@ -163,13 +163,11 @@ set ADK_VIRTUOSO_EXCLUDE_CELL_LIST \
 # For ECOs, we specify what buffer cells can be used in order to resolve
 # timing violations.
 set ADK_BUF_CELL_LIST \
-  "sky130_fd_sc_hd__buf_1 \
-   sky130_fd_sc_hd__buf_2 \
-   sky130_fd_sc_hd__buf_4 \
-   sky130_fd_sc_hd__buf_6 \
-   sky130_fd_sc_hd__buf_8 \
-   sky130_fd_sc_hd__buf_12 \
-   sky130_fd_sc_hd__buf_16"
+  "sky130_fd_sc_hs__buf_1 \
+   sky130_fd_sc_hs__buf_2 \
+   sky130_fd_sc_hs__buf_4 \
+   sky130_fd_sc_hs__buf_8 \
+   sky130_fd_sc_hs__buf_16"
 
 #-------------------------------------------------------------------------
 # Support for open-source tools
@@ -177,11 +175,11 @@ set ADK_BUF_CELL_LIST \
 # Open-source tools tend to require more detailed variables than
 # commercial tools do. In this section we define extra variables for them.
 
-set ADK_TIE_HI_CELL "sky130_fd_sc_hd__conb_1"
-set ADK_TIE_LO_CELL "sky130_fd_sc_hd__conb_1"
+set ADK_TIE_HI_CELL "sky130_fd_sc_hs__conb_1"
+set ADK_TIE_LO_CELL "sky130_fd_sc_hs__conb_1"
 set ADK_TIE_HI_PORT "HI"
 set ADK_TIE_LO_PORT "LO"
 
-set ADK_MIN_BUF_CELL   "sky130_fd_sc_hd__buf_1"
+set ADK_MIN_BUF_CELL   "sky130_fd_sc_hs__buf_1"
 set ADK_MIN_BUF_PORT_I "A"
 set ADK_MIN_BUF_PORT_O "X"
