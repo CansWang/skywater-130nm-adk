@@ -32,6 +32,19 @@ PROPERTYDEFINITIONS
   LAYER LEF58_TYPE STRING ;
 END PROPERTYDEFINITIONS
 
+SITE unit
+  SYMMETRY Y ;
+  CLASS CORE ;
+  SIZE 0.48 BY 3.33 ;
+END unit
+
+# Standard density, double height
+SITE unitdbl
+  SYMMETRY Y ;
+  CLASS CORE ;
+  SIZE 0.48 BY 6.66 ;
+END unitdbl
+
 # High density, single height
 SITE unithd
   SYMMETRY Y ;
